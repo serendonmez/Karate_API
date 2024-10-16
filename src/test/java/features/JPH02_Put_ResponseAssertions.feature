@@ -9,7 +9,8 @@ Feature:  JPH02 PUT request sonucu donen response bilgilerini test eder
         "id": 70,
         "title": "Michael",
         "body": "Adams"
-        }"""
+        }
+     """
 
     When method PUT
     Then status 200

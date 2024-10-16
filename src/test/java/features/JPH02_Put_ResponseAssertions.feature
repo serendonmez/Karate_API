@@ -5,8 +5,8 @@ Feature:  JPH02 PUT request sonucu donen response bilgilerini test eder
     And path  '/posts/70'
     And request
      """ {
-        "userId": 70,
-        "id": 10,
+        "userId": 10,
+        "id": 70,
         "title": "Michael",
         "body": "Adams"
         }"""
@@ -17,7 +17,7 @@ Feature:  JPH02 PUT request sonucu donen response bilgilerini test eder
     And match header Connection == 'keep-alive'
     And match response.title == 'Michael'
     And assert response.body == 'Adams'
-    And assert response.userId == 70
+    And assert response.userId == 10
     And match response.id == 70
 
 
